@@ -70,7 +70,7 @@ pip install pyautogui
 ```
 ## code
 
-or u cahn click [this](https://github.com/archie0732/py-tool/blob/main/code/click-speed.py) to get code
+or u can click [this](https://github.com/archie0732/py-tool/blob/main/code/click-speed.py) to get code
 ```py
 import pyautogui
 import time 
