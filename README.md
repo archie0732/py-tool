@@ -2,6 +2,6 @@
 
 1. [click-speed](https://github.com/archie0732/py-tool/blob/main/click-speed.md)
 2. [mouse-side]()
-
+3.[~~paino game~~]()
 
 ![](https://github.com/archie0732/py-tool/blob/main/picture/ayaka009.jpg)
