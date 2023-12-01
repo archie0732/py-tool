@@ -3,6 +3,6 @@
 
 
 1. [click-speed](https://github.com/archie0732/py-tool/blob/main/click-speed.md)
-2. [mouse-side]()
+2. [mouse-side](https://github.com/archie0732/py-tool/blob/main/mouse-side.md)
 3. [~~paino game~~](https://github.com/archie0732/py-tool/blob/main/pianogame.md)
 
