@@ -2,17 +2,12 @@ import csv
 import os
 from datetime import datetime
 
-# 以下會標記註解，方便看(頭有#的，可以刪除)
-
-# 取一個檔案名為trtransactions.csv的檔案
+# 取一個檔案名為transactions.csv的檔案
 FILENAME = 'transactions.csv'
 
-
-
+# 沒有檔案 ==> 寫入一個 用os
 def initialize_csv():
-    #沒有檔案 ==> 寫入一個 
     if not os.path.exists(FILENAME):
-        # 名稱:FILENAME ,mode: write 
         with open(FILENAME, mode='w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(['Date', 'Description', 'Amount'])
@@ -43,7 +38,7 @@ def calculate_balance():
     # 總金額 = 預設式0
     total = 0.0
     if not os.path.exists(FILENAME):
-        print("請先輸入帳目，在使用本功能")
+        print("請先輸入帳目")
         return total
     
     with open(FILENAME, mode='r') as file:
@@ -58,16 +53,16 @@ def calculate_balance():
     return total
 
 def main():
-    #如未建檔==>建檔
+    # 如未建檔==>建檔
     initialize_csv()
 
     while True:
-        print("\n歡迎使用計帳功能")
+        print("\n歡迎使用本計帳功能")
         print("1. 添加收入")
         print("2. 添加支出")
         print("3. 查看所有交易")
         print("4. 查看餘額")
-        print("5. exit")
+        print("5. 退出")
 
         choice = input("輸入您的選擇(數字): ")
 
@@ -95,14 +90,13 @@ def main():
             view_transactions()
         elif choice == '4':
             balance = calculate_balance()
-            print(f"目前於額: {balance}")
+            print(f"目前餘額: {balance}")
         elif choice == '5':
-            print("see u next time!")
+            print("再見!")
             break
         else:
-            print("keyboard input error")
+            print("無效的選擇，請重試")
 
-
-# 執行main function
+# 執行主函數
 if __name__ == "__main__":
     main()
