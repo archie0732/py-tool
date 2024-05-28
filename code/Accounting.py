@@ -41,7 +41,7 @@ def calculate_balance():
     # 總金額 = 預設式0
     total = 0.0
     if not os.path.exists(FILENAME):
-        print("請先見輸入帳目")
+        print("請先輸入帳目，在使用本功能")
         return total
     
     with open(FILENAME, mode='r') as file:
@@ -60,7 +60,7 @@ def main():
     initialize_csv()
 
     while True:
-        print("\n歡迎使用本計帳功能")
+        print("\n歡迎使用計帳功能")
         print("1. 添加收入")
         print("2. 添加支出")
         print("3. 查看所有交易")
@@ -79,7 +79,7 @@ def main():
 
             description = input("輸入關於收支描述: ")
             try:
-                amount = float(input("金额: "))
+                amount = float(input("金額: "))
             except ValueError:
                 print("輸入錯誤")
                 continue
