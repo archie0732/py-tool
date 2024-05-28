@@ -8,9 +8,11 @@ from datetime import datetime
 FILENAME = 'transactions.csv'
 
 
-#沒有檔案 ==> 寫入一個 用os
+
 def initialize_csv():
+    #沒有檔案 ==> 寫入一個 
     if not os.path.exists(FILENAME):
+        # 名稱:FILENAME ,mode: write 
         with open(FILENAME, mode='w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(['Date', 'Description', 'Amount'])
